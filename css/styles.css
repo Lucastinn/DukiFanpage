@@ -1,58 +1,65 @@
-/* Estilo para la barra social */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .social-nav {
-    padding: 0px 0;
+    background-color: black;
+    padding: 5px 0;
+    width: 100%;
+    margin: 0;
 }
 
-.social-nav .navbar-nav {
-    display: flex;
-    justify-content: center;
+.social-nav .nav-link img {
+    width: 18px;
+    height: 18px;
 }
 
-.social-nav .navbar-nav li {
-    margin: 0 10px;
+.fixed-header {
+    background-color: rgba(0, 0, 0, 0.199); /* Fondo semitransparente para la barra fija */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    z-index: 10;
 }
 
-/* Estilo para la segunda caja (menú, logo y buscador) */
-.menu-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.menu-bar .dropdown {
-    flex: 1;
-}
-
-.menu-bar .logo {
-    flex: 2;
-    text-align: center;
-}
-
-.menu-bar .search-bar {
-    flex: 1;
-    text-align: right;
-}
-
-/* Fondo de video y superposición de imagen */
-#videoIndex {
+#videoBackground {
+    height: calc(100vh - 100px); /* Ajusta la altura del video si es necesario */
+    width: 100%;
     position: relative;
-    height: 100vh;
     overflow: hidden;
 }
 
 #background-video {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .overlay-image {
+    max-width: 100%;
+    max-height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6; /* Ajusta la opacidad si es necesario */
+    top: 80%; /* Mueve la imagen más abajo ajustando este valor */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-bar {
+    padding: 10px 20px;
+}
+
+.menu-bar .logo img {
+    max-height: 80px; /* Aumenta el tamaño del logo */
+}
+
+#adaTour {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#spotify {
+    padding: 20px;
+    background-color: #fff;
 }
